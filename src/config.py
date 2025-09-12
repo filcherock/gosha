@@ -15,6 +15,13 @@ import random
 from ai.chatbot import aiReturn
 from voice import voiceStart
 
+FULL_NAME = "Гоша | Голосовой ассистент"
+VERSION = "0.0.1"
+STATUS = "BETA VERSION"
+AUTHOR = "FILCHER"
+AUTHOR_GITHUB = "https://github.com/filcherock"
+LICENSE = "GNU GENERAL PUBLIC LICENSE V3.0"
+REPOS = "https://github.com/filcherock/gosha"
 
 def play_greetings():
     voiceStart(f"{os.getcwd()}/voice/greeting{random.randint(1, 3)}.wav")
