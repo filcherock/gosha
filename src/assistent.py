@@ -8,8 +8,12 @@ FILE: assistent.py
 
 import os
 import sys
+import json
+
 import vosk
 import pyaudio
+
+from config import recog
 
 # Укажите путь к модели
 model_path = "model/vosk-model-small-ru-0.22"  # Замените на путь к вашей модели
@@ -36,7 +40,9 @@ while True:
     data = stream.read(4000)
     if recognizer.AcceptWaveform(data):
         result = recognizer.Result()
-        print("Вы сказали:", result)
+        result_json = json.loads(result)
+        recognized_text = result_json.get('text', '')
+        recog(recognized_text)
 
 stream.stop_stream()
 stream.close()
