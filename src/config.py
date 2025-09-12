@@ -9,21 +9,26 @@ FILE: config.py
 '''
 
 import sys
+import os
+import random
 
 from ai.chatbot import aiReturn
+from voice import voiceStart
+
 
 def play_greetings():
-    print("Привет!")
+    voiceStart(f"{os.getcwd()}/voice/greeting{random.randint(1, 3)}.wav")
+    print("Done!")
 
 def play_quit():
-    print("Привет!")
+    voiceStart(f"{os.getcwd()}/voice/end{random.randint(1, 3)}.wav")
     sys.exit()
 
 def recog(text):
     for command_tuple, action in keyword.items():
         if text.lower() in command_tuple:
-            action()  # Выполняем соответствующую функцию
-            return  # Завершаем функцию после выполнения команды
+            action()
+            return
     if text != "":
         aiReturn(text)
     else:

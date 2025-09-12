@@ -1,6 +1,7 @@
 __pycache__/
 .venv/
 model/
+.vscode/
 
 db.sqlite3
 db.sqlite3-shm
