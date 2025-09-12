@@ -3,6 +3,8 @@ __pycache__/
 model/
 .vscode/
 
+Tkinter-Designer/
+
 db.sqlite3
 db.sqlite3-shm
 db.sqlite3-wal
