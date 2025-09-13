@@ -15,7 +15,7 @@ LICENSE = "GNU GENERAL PUBLIC LICENSE V3.0"
 REPOS = "https://github.com/filcherock/gosha"
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\filip.DESKTOP-0N2ASL2\Documents\gosha-1\src\gui\build\assets\frame1")
+ASSETS_PATH = OUTPUT_PATH / Path(r"assets/frame1")
 
 voices = {
     "Классический (Гоша Мохов)": "gosha",
