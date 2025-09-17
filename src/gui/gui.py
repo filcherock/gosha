@@ -97,7 +97,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: subprocess.Popen(["python", "src/gui/build/gui1.py"]),
+    command=lambda: subprocess.Popen(["python", "src/gui/gui1.py"]),
     relief="flat",
     bg="#FFFFFF",
 )
